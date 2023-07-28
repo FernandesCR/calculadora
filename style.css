@@ -13,35 +13,21 @@
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 /* ------------------------------------ */
 
 
 
 /* --------------- Estilo da lista e itens dentro dela ---------------------- */
-=======
-#caixaDeCampoEOperacao {
-    border-radius: 100%;
-}
-
->>>>>>> f02d07743c7f5eaca752761757be5411ff0ce413
 ul#listaCalculo {
     list-style-type: none;
     counter-reset: custom-counter;
 }
 
 ul#listaCalculo li::before {
-<<<<<<< HEAD
     counter-increment: custom-counter;
     content: "[" counter(custom-counter) "] Resultado -";
     margin-right: 0.5em;
     color: #fffffc;
-=======
-    counter-increment: incrementadorDeNumerosDaLista;
-    content: "Resultado [" counter(incrementadorDeNumerosDaLista) "] -";
-    margin-right: 0.5em;
-    color: #eeff00;
->>>>>>> f02d07743c7f5eaca752761757be5411ff0ce413
 }
 
 #listaDoCalculo {
@@ -54,7 +40,6 @@ ul#listaCalculo li::before {
     background: rgba(202, 195, 195, 0.4);
     margin: 10px;
     color: #121413;
-<<<<<<< HEAD
     overflow-y: scroll;
     scroll-behavior: smooth;
     max-height: 200px;
@@ -83,10 +68,6 @@ ul#listaCalculo li::before {
 
 
 /* ------ São estilos para os titulos da lista e resulado ----- */
-=======
-}
-
->>>>>>> f02d07743c7f5eaca752761757be5411ff0ce413
 .titulosFormatacao {
     display: flex;
     justify-content: center;
@@ -94,7 +75,6 @@ ul#listaCalculo li::before {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-<<<<<<< HEAD
 .bordaTitulos {
     border: 1px solid #616060;
     background-color: #616060;
@@ -110,8 +90,6 @@ ul#listaCalculo li::before {
 
 
 /* ----------Area do botao,campo e operacao------------ */
-=======
->>>>>>> f02d07743c7f5eaca752761757be5411ff0ce413
 .campo {
     appearance: none;
     background-color: #FAFBFC;
@@ -161,28 +139,14 @@ ul#listaCalculo li::before {
     border-radius: 6px;
     color: #24292E;
     cursor: pointer;
-<<<<<<< HEAD
-=======
-    display: inline-flex;
->>>>>>> f02d07743c7f5eaca752761757be5411ff0ce413
     font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
-<<<<<<< HEAD
     padding: 2px 3px;
     text-align: center;
     margin: 1px 5px;
     display: inline-flex;
-=======
-    list-style: none;
-    padding: 2px 3px;
-    text-align: center;
-}
-
-#central {
-    display: flex;
->>>>>>> f02d07743c7f5eaca752761757be5411ff0ce413
     justify-content: center;
     align-items: center;
 }
@@ -245,11 +209,7 @@ ul#listaCalculo li::before {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 50px;
-<<<<<<< HEAD
     color: white;
-=======
-    color: white
->>>>>>> f02d07743c7f5eaca752761757be5411ff0ce413
 }
 
 body {
