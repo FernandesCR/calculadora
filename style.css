@@ -12,6 +12,41 @@
     box-sizing: border-box;
 }
 
+#caixaDeCampoEOperacao {
+    border-radius: 100%;
+}
+
+ul#listaCalculo {
+    list-style-type: none;
+    counter-reset: custom-counter;
+}
+
+ul#listaCalculo li::before {
+    counter-increment: incrementadorDeNumerosDaLista;
+    content: "Resultado [" counter(incrementadorDeNumerosDaLista) "] -";
+    margin-right: 0.5em;
+    color: #eeff00;
+}
+
+#listaDoCalculo {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgba(214, 208, 208, 0.15);
+    border-radius: 6px;
+    display: flex;
+    position: relative;
+    padding: 1px 4px;
+    background: rgba(202, 195, 195, 0.4);
+    margin: 10px;
+    color: #121413;
+}
+
+.titulosFormatacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .campo {
     appearance: none;
     background-color: #FAFBFC;
@@ -55,18 +90,16 @@
     background-color: #FAFBFC;
     border: 1px solid rgba(27, 31, 35, 0.15);
     border-radius: 6px;
-    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-    box-sizing: border-box;
     color: #24292E;
     cursor: pointer;
-    display: inline-block;
+    display: inline-flex;
     font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
     list-style: none;
-    padding: 2px 6px;
-    position: relative;
+    padding: 2px 3px;
+    text-align: center;
 }
 
 #central {
@@ -88,7 +121,17 @@
     border-radius: 6px;
     display: flex;
     position: relative;
-    padding: 1px 4px;
+    background: rgba(202, 195, 195, 0.4);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+#resultado {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
 }
 
 #geral {
@@ -102,9 +145,8 @@
     transform: translate(-50%, -50%);
     padding: 50px;
     color: white
-    
 }
 
 body {
-    background-image: linear-gradient(150deg, #121413 0%,#1b1e1f 66%, #1d2022 100%);
+    background-image: linear-gradient(150deg, #121413 0%, #1b1e1f 66%, #1d2022 100%);
 }

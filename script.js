@@ -1,23 +1,43 @@
-function calcular() {
-    validacaodecampo();
+let listaDeCalculo = [];
 
-    var num1 = parseFloat(document.getElementById("campo1").value);
-    var num2 = parseFloat(document.getElementById("campo2").value);
-    var operacao = document.getElementById("operacao").value;
-    var resultado = document.getElementById("resultado");
+function calcular() {
+    validacaoDeCampo();
+
+    let num1 = parseFloat(document.getElementById("campo1").value);
+    let num2 = parseFloat(document.getElementById("campo2").value);
+    let operacao = document.getElementById("operacao").value;
+    let resultado = document.getElementById("resultado");
 
     if (operacao === "somar") {
-        resultado.innerHTML = (num1 + num2);
+        listaDeCalculo.push(`${num1} + ${num2} = ${(num1 + num2)}`);
+        resultado.innerHTML = (num1 + num2)
     } else if (operacao === "subtrair") {
-        resultado.innerHTML = (num1 - num2);
+        listaDeCalculo.push(`${num1} - ${num2} = ${(num1 - num2)}`);
+        resultado.innerHTML = (num1 - num2)
     } else if (operacao === "multiplicar") {
-        resultado.innerHTML = (num1 * num2);
+        listaDeCalculo.push(`${num1} * ${num2} = ${(num1 * num2)}`);
+        resultado.innerHTML = (num1 * num2)
     } else if (operacao === "dividir") {
-        resultado.innerHTML = (num1 / num2);
+        listaDeCalculo.push(`${num1} / ${num2} = ${(num1 / num2)}`);
+        resultado.innerHTML = (num1 / num2)
     }
 }
 
-function validacaodecampo() {
+
+function listaCalculo() {
+
+    const ulElement = document.getElementById('listaCalculo');
+
+    ulElement.innerHTML = '';
+
+    listaDeCalculo.forEach(calculo => {
+        const liElement = document.createElement('li');
+        liElement.textContent = calculo;
+        ulElement.appendChild(liElement);
+    });
+}
+
+function validacaoDeCampo() {
     const campo1 = document.getElementById("campo1").value;
     const campo2 = document.getElementById("campo2").value;
     const operacao = document.getElementById("operacao").value;
