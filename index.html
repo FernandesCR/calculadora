@@ -8,36 +8,69 @@
 </head>
 
 <body>
+
+    <section>
+        <div id="navegacao">
+            <ul>
+                <li><a href="index.html">Calculadora</a></li>
+                <li><a href="imc/calculadoraIMC.html">Calculadora IMC</a></li>
+            </ul>
+        </div>
+    </section>
+
     <div id="geral">
+
         <h1 id="titulo">Calculadora</h1>
+
         <div id="central">
             <div>
-                <div id="caixaDeCampoEOperacao">
-                    <input type="number" class="campo" id="campo1" placeholder="Campo 1">
-                    <select id="operacao">
-                        <option value="operacao1" disabled selected>Operação</option>
-                        <option value="somar">+</option>
-                        <option value="subtrair">-</option>
-                        <option value="multiplicar">x</option>
-                        <option value="dividir">/</option>
-                    </select>
-                    <input type="number" class="campo" id="campo2" placeholder="Campo 2">
-                    <button onclick="calcular(), listaCalculo()" id="botao">Calcular</button>
-                </div>
-                <div class="error" id="campos1">Insira um valor no campo 1</div>
-                <div class="error" id="campos2">Insira um valor no campo 2</div>
-                <div class="error" id="campos3">Informe uma operação!</div>
-                <p class="titulosFormatacao"><strong class="bordaTitulos">Resultado </strong>
-                <div id="resultasDoEstilo">
-                    <p id="resultado"></p>
-                </div>
-                <p class="titulosFormatacao"><strong class="bordaTitulos">Lista de calculos anteriores</strong></p>
-                <div id="listaDoCalculo">
-                    <ul id="listaCalculo"></ul>
-                </div>
+
+                <section name="camposEOperação">
+
+                    <div id="caixaDeCampoEOperacao">
+                        <input type="number" class="campo" id="campo1" name="campo" placeholder="Campo 1">
+                        <select id="operacao">
+                            <option value="operacao1" disabled selected>Operação</option>
+                            <option value="somar">+</option>
+                            <option value="subtrair">-</option>
+                            <option value="multiplicar">x</option>
+                            <option value="dividir">/</option>
+                        </select>
+                        <input type="number" class="campo" id="campo2" name="campo" placeholder="Campo 2">
+                        <button onclick="validacaoDeCampo()" class="botao">Calcular</button>
+                        <button onclick="limparCampo()" class="botao">Limpar</button>
+                    </div>
+
+                </section>
+
+                <section name="erros">
+
+                    <div class="error" id="campos1" name="error">Insira um valor no campo 1</div>
+                    <div class="error" id="campos2" name="error">Insira um valor no campo 2</div>
+                    <div class="error" id="campos3" name="error">Informe uma operação!</div>
+
+                </section>
+
+                <section name="resultados">
+
+                    <p class="titulosFormatacao"><strong class="bordaTitulos">Resultado </strong>
+                    <div id="resultasDoEstilo">
+                        <p id="resultado"></p>
+                    </div>
+                    <p class="titulosFormatacao"><strong class="bordaTitulos">Lista de calculos anteriores</strong></p>
+                    <div id="listaDoCalculo">
+                        <ul id="listaCalculo"></ul>
+                    </div>
+                    <button onclick="limparLista()" class="botao">Limpar</button>
+
+                </section>
+
             </div>
+
         </div>
+
     </div>
+
 </body>
 
 <link rel="stylesheet" href="style.css">
