@@ -33,16 +33,14 @@ function validacaoDeCampo() {
     const campo2 = parseFloat(document.getElementById("campo2").value);
     const operacao = document.getElementById("operacao").value;
 
-    if (campo1) {
-        isNaN(campo1 + campo2) ? "" : calcular();
-    }
+    isNaN(campo1 + campo2) ? "" : calcular();
 
     if (!campo1) {
         document.getElementById("campos1").style.display = "block";
     } else {
         document.getElementById("campos1").style.display = "none";
     }
-     if (!campo2) {
+    if (!campo2) {
         document.getElementById("campos2").style.display = "block";
     } else {
         document.getElementById("campos2").style.display = "none";

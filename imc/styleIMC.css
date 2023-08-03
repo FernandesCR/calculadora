@@ -1,32 +1,59 @@
+#tabela {
+    height: center;
+    width: center;
+}
+
+/* ---------------------------------------------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr {
+    border-bottom: solid rgba(0, 0, 0, 0.4) 1px;
+}
+table tr td:not(:last-child) {
+    padding: 15px 10px 15px 10px; 
+}
+table tr td span {
+    display:block;
+    background-color:rgba(235, 220, 220, 0.4);
+    padding:5px 5px 0 5px;
+}
+table tr:nth-child(even) td span {
+    background-color:rgba(235, 220, 220, 0.4);
+}
+/* ---------------------------------------------- */
 #geralIMC {
     background: rgba(235, 220, 220, 0.4);
     box-shadow: 0 8px 32px 0 rgba(218, 219, 231, 0.37);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 50px;
+    padding: 30px;
     color: white;
 }
 
 .botaoIMC {
-    appearance: none;
-    background-color: #FAFBFC;
-    border: 1px solid rgba(27, 31, 35, 0.15);
-    border-radius: 6px;
-    box-sizing: border-box;
-    color: #24292E;
-    cursor: pointer;
+    box-shadow: 0px 0px 11px 0px #1f241e;
+    background-color: #616060;
+    border-radius: 28px;
+    border: 1px solid #232e24;
     display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
     font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
-    padding: 2px 6px;
+    padding: 10px 6px;
     position: relative;
     margin: 1px 1px;
+    width: 100px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -35,27 +62,32 @@
 .botaoIMC:active {
     transform: scale(0.98);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+    position: relative;
+    top: 1px;
+}
+
+.botaoIMC:hover {
+    background: #CCC;
+    color: #000;
+    border-color: #000;
 }
 
 .campoIMC {
-    appearance: none;
-    background-color: #FAFBFC;
-    border: 1px solid rgba(27, 31, 35, 0.15);
-    border-radius: 6px;
-    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-    box-sizing: border-box;
-    color: #24292E;
-    cursor: pointer;
+    background-color: #e0e0e0;
+    border-radius: 28px;
+    border: 1px solid #232e24;
     display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
     font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 14px;
     font-weight: 500;
-    width: 200px;
+    width: 100px;
     line-height: 17px;
-    padding: 2px 6px;
+    padding: 10px 6px;
     position: relative;
     text-align: center;
-    margin: 5px;
+    /* margin-left: 140px; */
 }
 
 #tituloDoResultadoIMC {
@@ -87,7 +119,7 @@
     color: #ffffff;
     background: #ff0000;
     border-radius: 6px;
-    width: 200px;
+    width: 100px;
     display: none;
     margin: 5px;
     box-sizing: border-box;

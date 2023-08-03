@@ -21,20 +21,54 @@
     <section>
         <div id="geralIMC">
 
-            <h1 id="tituloDaCalculadoraIMC">calculadora IMC</h1>
-
             <section>
+                <h1 id="tituloDaCalculadoraIMC">calculadora IMC</h1>
                 <div>
-                    <input type="number" id="campo1" class="campoIMC" placeholder="Peso">
-                    <Div class="errorIMC" id="campoz1">Informe um peso.</Div>
-                    <br>
-                    <input type="number" id="campo2" class="campoIMC" placeholder="Altura">
-                    <div class="errorIMC" id="campoz2">Informe uma altura.</div>
-                    <br>
+                    <input type="number" id="campo2" class="campoIMC" name="campo" placeholder="Altura">
+                    <input type="number" id="campo1" class="campoIMC" name="campo" placeholder="Peso">
                     <button onclick="validacaoDosCampos()" class="botaoIMC">Calcular</button>
+                    <button onclick="limparCampo()" class="botaoIMC">Limpar</button>
+                    <Div class="errorIMC" id="campoz1">Informe um peso.</Div>
+                    <div class="errorIMC" id="campoz2">Informe uma altura.</div>
                 </div>
                 <div>
-                    <h3 id="tituloDoResultadoIMC">Resultado: <p id="resultado"></p></h3>
+                    <h3 id="tituloDoResultadoIMC">Seu IMC: <p id="resultado"></p>
+                    </h3>
+                </div>
+            </section>
+
+            <section>
+                <div id="tabela">
+                    <table>
+                        <th>IMC</th>
+                        <th>CLASSIFICAÇÃO</th>
+                        <th>OBESIDADE (GRAU)</th>
+                        <tr id="magreza" align=center>
+                            <td>MENOR QUE 18,5</td>
+                            <td>MAGREZA</td>
+                            <td>0</td>
+                        </tr>
+                        <tr id="normal" align=center>
+                            <td>ENTRE 18,5 E 24,9</td>
+                            <td>NORMAL</td>
+                            <td>0</td>
+                        </tr>
+                        <tr id="sobrePeso" align=center>
+                            <td>ENTRE 25,0 E 29,9</td>
+                            <td>SOBREPESO</td>
+                            <td>I</td>
+                        </tr>
+                        <tr id="obesidade" align=center>
+                            <td>ENTRE 30,0 E 39,9</td>
+                            <td>OBESIDADE</td>
+                            <td>II</td>
+                        </tr>
+                        <tr id="obesidadeGrave" align=center>
+                            <td>MAIOR QUE 40,0</td>
+                            <td>OBESIDADE GRAVE</td>
+                            <td>III</td>
+                        </tr>
+                    </table>
                 </div>
             </section>
 
